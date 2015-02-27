@@ -1,4 +1,4 @@
-<?php namespace Susomena\Hola;
+<?php namespace Susomena\Hello;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -28,7 +28,14 @@ class HolaServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-		//
+		$this->app['hello'] = $this->app->share(function($app){
+			return new Hello;
+		});
+
+		$this->app->booting(function(){
+			$loader = \Illuminate\Foundation\AliasLoader::getInstance();
+			$loader->alias('Hello', 'Susomena\Hello\Facades\Hello');
+		});
 	}
 
 	/**
