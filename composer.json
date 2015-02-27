@@ -1,5 +1,5 @@
 {
-    "name": "susomena/hola",
+    "name": "susomena/hello",
     "description": "Simple 'Hello, world!' Laravel package",
 	"keywords": ["hello", "world"],
 	"license": "MIT",
@@ -18,7 +18,7 @@
             "src/migrations"
         ],
         "psr-4": {
-            "Susomena\\Hola\\": "src/"
+            "Susomena\\Hello\\": "src/"
         }
     },
     "minimum-stability": "stable"

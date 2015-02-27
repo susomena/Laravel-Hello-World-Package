@@ -18,7 +18,7 @@ class HolaServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
-		$this->package('susomena/hola');
+		$this->package('susomena/hello');
 	}
 
 	/**
